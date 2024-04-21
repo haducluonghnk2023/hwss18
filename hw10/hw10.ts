@@ -1,4 +1,4 @@
-function addition(a: number | string, b: number | string): number | string {
+function add(a: number | string, b: number | string): number | string {
     if (typeof a === 'string' && isNaN(parseFloat(a))) {
         return 'Không hợp lệ';
     }
@@ -8,7 +8,7 @@ function addition(a: number | string, b: number | string): number | string {
     return parseFloat(a as string) + parseFloat(b as string);
 }
 
-function subtraction(a: number | string, b: number | string): number | string {
+function sub(a: number | string, b: number | string): number | string {
     if (typeof a === 'string' && isNaN(parseFloat(a))) {
         return 'Không hợp lệ';
     }
@@ -18,7 +18,7 @@ function subtraction(a: number | string, b: number | string): number | string {
     return parseFloat(a as string) - parseFloat(b as string);
 }
 
-function multiplication(a: number | string, b: number | string): number | string {
+function multi(a: number | string, b: number | string): number | string {
     if (typeof a === 'string' && isNaN(parseFloat(a))) {
         return 'Không hợp lệ';
     }
@@ -42,9 +42,9 @@ function division(a: number | string, b: number | string): number | string {
 }
 
 // Sử dụng các hàm
-console.log(addition(5, 10)); // Kết quả: 15
-console.log(subtraction('20', 8)); // Kết quả: 12
-console.log(multiplication('7', '4')); // Kết quả: 28
+console.log(add(5, 10)); // Kết quả: 15
+console.log(sub('20', 8)); // Kết quả: 12
+console.log(multi('7', '4')); // Kết quả: 28
 console.log(division(10, '2')); // Kết quả: 5
 console.log(division('100', '0')); // Kết quả: Không thể chia cho 0
-console.log(addition('abc', 5)); // Kết quả: Không hợp lệ
+console.log(add('abc', 5)); // Kết quả: Không hợp lệ
